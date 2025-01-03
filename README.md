@@ -1,63 +1,74 @@
-# Gesture-Based Mouse Control with Mediapipe
+Gesture-Controlled Mouse System
+A Python-based system that enables hands-free computer control using webcam-detected hand gestures. Control your mouse cursor, perform clicks, and capture screenshots using natural hand movements.
+Features
 
-## Overview
-This project is a Python-based application that enables mouse control through hand gestures using a webcam. It uses Mediapipe for hand detection, OpenCV for image processing, and PyAutoGUI for system interactions.
+👆 Cursor control using index finger
+🖱️ Left, right, and double click gestures
+📸 Screenshot capture functionality
+🎯 Real-time hand tracking
+⚡ Low-latency response
 
-## Features
-- **Move Mouse Pointer:** Control the cursor with your index finger.
-- **Left Click:** Perform a left-click gesture.
-- **Right Click:** Perform a right-click gesture.
-- **Double Click:** Perform a double-click gesture.
-- **Take Screenshot:** Capture your screen with a specific gesture.
+Prerequisites
 
-## Installation
+Python 3.8+
+Webcam
+Internet connection (for initial MediaPipe model download)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/SivaKumarSekar01/gesture-mouse-control.git
-   cd gesture-mouse-control
-Install dependencies:
+Installation
 
-bash
-Copy code
-pip install -r requirements.txt
-Run the application:
+Clone the repository:
 
-bash
-Copy code
-python main.py
-Dependencies
-Python 3.x
-OpenCV
-Mediapipe
-PyAutoGUI
-NumPy
-Pynput
-Install these using the requirements.txt file:
+bashCopygit clone https://github.com/yourusername/gesture-mouse
+cd gesture-mouse
 
-bash
-Copy code
-pip install -r requirements.txt
+Install required packages:
+
+bashCopypip install -r requirements.txt
 Usage
-Ensure your webcam is connected and functioning.
+Run the main script:
+bashCopypython main.py
+Supported Gestures
+GestureActionDescriptionPoint with index fingerMove cursorMove your index finger to control cursor positionIndex bent, middle straightLeft clickBend index finger while keeping middle finger straightMiddle bent, index straightRight clickBend middle finger while keeping index finger straightBoth fingers bentDouble clickBend both index and middle fingersThumb-index pinchScreenshotPinch thumb and index finger together
+Dependencies
+pythonCopyopencv-python==4.8.0
+mediapipe==0.10.0
+pyautogui==0.9.54
+numpy==1.24.3
+pynput==1.7.6
+Code Structure
 
-Run main.py and position your hand within the camera frame.
+main.py: Core application and webcam handling
+Gesture detection modules:
 
-Use gestures to interact with the system:
+Hand landmark tracking
+Gesture recognition
+Mouse control interface
 
-Index Finger Movement: Moves the cursor.
-Left Click Gesture: Click with the index finger and thumb in proximity.
-Right Click Gesture: Make a specific hand posture.
-Double Click Gesture: Combine finger positions.
-Screenshot Gesture: Touch thumb and index together briefly.
-Press 'q' to exit.
+
+
+Performance Tips
+
+Ensure good lighting conditions
+Keep your hand within camera frame
+Maintain 30-60cm distance from camera
+Use contrasting background
 
 Contributing
-Feel free to fork the repository, create a new branch, and submit a pull request with improvements.
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit changes (git commit -m 'Add amazing feature')
+Push to branch (git push origin feature/amazing-feature)
+Open Pull Request
 
 License
-This project is licensed under the MIT License.
+Distributed under the MIT License. See LICENSE for more information.
+Acknowledgments
+
+MediaPipe for hand tracking
+OpenCV for image processing
+PyAutoGUI for mouse control
 
 Contact
-Author: Sivakumar Sekar
-GitHub: SivaKumarSekar01
+Your Name - @yourtwitter
+Project Link: https://github.com/yourusername/gesture-mouse
